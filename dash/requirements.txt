@@ -1,8 +1,0 @@
-$ git init        
-$ virtualenv venv 
-$ source venv/bin/activate 
-
-$ pip install dash
-$ pip install plotly
-
-$ pip install gunicorn
