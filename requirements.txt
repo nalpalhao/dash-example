@@ -1,6 +1,6 @@
 gunicorn
 plotly
-dash
+dash>=0.23.1
 requests
 dash_renderer
 dash-html-components
