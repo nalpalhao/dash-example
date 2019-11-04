@@ -11,7 +11,7 @@ df_1 = pd.read_csv('DV_data.csv')
 
 app = dash.Dash(__name__)
 
-fig = px.choropleth(df_1, locations='iso-a3', color='total', projection='orthographic', animation_frame='Year', title='El Mundo')
+fig = px.choropleth(df_1, locations='iso-a3', color='total', projection='orthographic', animation_frame='Year', title='Ahhhhh Gaaaaaaaay!!!')
 
 server = app.server
 
