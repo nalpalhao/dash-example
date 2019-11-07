@@ -5,5 +5,4 @@ requests
 dash_renderer
 dash-html-components
 dash-core-components
-plotly
 pandas
