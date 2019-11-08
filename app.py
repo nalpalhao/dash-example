@@ -11,7 +11,7 @@ import plotly.graph_objs as go
 app = dash.Dash(__name__)
 server = app.server
 
-df = pd.read_csv('C:\\Conda\\Plotly\\dv_data.csv')
+df = pd.read_csv('DV_data.csv')
 available_indicators = df.columns
 
 app.layout = html.Div([
