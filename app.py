@@ -51,7 +51,6 @@ points = pickle.load(open(DATA_PATH.joinpath("points.pkl"), "rb"))
 
 
 # Create global chart template
-mapbox_access_token = "pk.eyJ1IjoiamFja2x1byIsImEiOiJjajNlcnh3MzEwMHZtMzNueGw3NWw5ZXF5In0.fk8k06T96Ml9CLGgKmk81w"
 
 layout = dict(
     autosize=True,
