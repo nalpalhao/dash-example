@@ -6,17 +6,17 @@ import pandas as pd
 
 # Dataset Processing
 
-df = pd.read_csv('dataset\\dv_data.csv')
-data = df.loc[df['Country'] == 'Portugal'][['Year', 'total']].values
+df = pd.read_csv('emission_full.csv')
+data = df.loc[df['country_name'] == 'Portugal'][['year', 'CO2_emissions']].values
 x = data[:, 0]
 y = data[:, 1]
 
 # Building our Graphs
 
-plot = go.Scatter(x=x, y=y)
+data = [dict(type='scatter', x=x, y=y)]
 
 fig = go.Figure(
-    data=[plot],
+    data=data,
     layout_title_text="Portugal's Emissions over 25 years",
     layout_xaxis_title='Years',
     layout_yaxis_title='CO2 Emissions'
