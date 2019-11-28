@@ -6,21 +6,36 @@ import pandas as pd
 
 # Dataset Processing
 
-df = pd.read_csv('emission_full.csv')
-data = df.loc[df['country_name'] == 'Portugal'][['year', 'CO2_emissions']].values
-x = data[:, 0]
-y = data[:, 1]
+df_emissions = pd.read_csv('emission_full.csv')
+
+df_emission_0 = df_emissions.loc[df_emissions['year']==2000]
 
 # Building our Graphs
 
-data = [dict(type='scatter', x=x, y=y)]
+data_choropleth = dict(type='choropleth',
+                       locations=df_emission_0['iso-a3'],  #There are three ways to 'merge' your data with the data pre embedded in the map
+                       #locationmode=[]
+                       z=np.log(df_emission_0['CO2_emissions']),
+                       text=df_emission_0['country_name'],
+                       colorscale='inferno'
+                      )
 
-fig = go.Figure(
-    data=data,
-    layout_title_text="Portugal's Emissions over 25 years",
-    layout_xaxis_title='Years',
-    layout_yaxis_title='CO2 Emissions'
-)
+layout_choropleth = dict(geo=dict(scope='world',  #default
+                                  projection=dict(type='azimuthal equal area'
+                                                 ),
+                                  #showland=True,   # default = True
+                                  landcolor='black',
+                                  lakecolor='white',
+                                  showocean=True,   # default = False
+                                  oceancolor='azure'
+                                 ),
+                         
+                         title=dict(text='World Choropleth Map',
+                                    x=.5 # Title relative position according to the xaxis, range (0,1)
+                                   )
+                        )
+
+fig = go.Figure(data=data_choropleth, layout=layout_choropleth)
 
 # The App itself
 
