@@ -15,7 +15,7 @@ df_emission_0 = df_emissions.loc[df_emissions['year']==2000]
 
 data_choropleth = dict(type='choropleth',
                        locations=df_emission_0['country_name'],  #There are three ways to 'merge' your data with the data pre embedded in the map
-                       locationmode='country names'
+                       locationmode='country names',
                        z=np.log(df_emission_0['CO2_emissions']),
                        text=df_emission_0['country_name'],
                        colorscale='inferno',
