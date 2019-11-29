@@ -22,7 +22,7 @@ data_choropleth = dict(type='choropleth',
                       )
 
 layout_choropleth = dict(geo=dict(scope='world',  #default
-                                  projection=dict(type='azimuthal equal area'
+                                  projection=dict(type='orthographic'
                                                  ),
                                   #showland=True,   # default = True
                                   landcolor='black',
