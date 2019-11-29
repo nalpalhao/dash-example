@@ -14,11 +14,12 @@ df_emission_0 = df_emissions.loc[df_emissions['year']==2000]
 # Building our Graphs
 
 data_choropleth = dict(type='choropleth',
-                       locations=df_emission_0['iso-a3'],  #There are three ways to 'merge' your data with the data pre embedded in the map
-                       #locationmode=[]
+                       locations=df_emission_0['country_name'],  #There are three ways to 'merge' your data with the data pre embedded in the map
+                       locationmode='country names'
                        z=np.log(df_emission_0['CO2_emissions']),
                        text=df_emission_0['country_name'],
-                       colorscale='inferno'
+                       colorscale='inferno',
+                       colorbar=dict(title='CO2 Emissions log scaled')
                       )
 
 layout_choropleth = dict(geo=dict(scope='world',  #default
