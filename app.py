@@ -46,16 +46,13 @@ app = dash.Dash(__name__)
 server = app.server
 
 app.layout = html.Div(children=[
-    html.H1(children='My First DashBoard'),
+                                html.H1('My First DashBoard'),
 
-    html.Div(children='''
-        Example of html Container
-    '''),
+                                html.Div(children='Example of html Container'),
 
-    dcc.Graph(
-        id='example-graph',
-        figure=fig
-    )
+                                dcc.Graph(id='example-graph',
+                                          figure=fig
+                                         )
 ])
 
 if __name__ == '__main__':
