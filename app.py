@@ -7,26 +7,6 @@ import numpy as np
 
 
 
-from google.cloud import firestore
-
-# Add a new document
-db = firestore.Client.from_service_account_json('pass.json')
-
-
-doc_ref = db.collection(u'users').document(u'alovelace')
-doc_ref.set({
-    u'first': u'Ada',
-    u'last': u'Lovelace',
-    u'born': 1815
-})
-
-# Then query for documents
-users_ref = db.collection(u'users')
-a = []
-for doc in users_ref.stream():
-    a.append(u'{} => {}'.format(doc.id, doc.to_dict()))
-    
-    
 # Dataset Processing
 
 df_emissions = pd.read_csv('emission_full.csv')
@@ -68,7 +48,7 @@ app = dash.Dash(__name__)
 server = app.server
 
 app.layout = html.Div(children=[
-                                html.H1('My First DashBoard' + str(a)),
+                                html.H1('My First DashBoard'),
 
                                 html.Div(children='Example of html Container'),
 
