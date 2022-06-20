@@ -1,0 +1,82 @@
+body {
+    background-color: #d6d6c2;
+    }
+
+.h1_title {
+    background-color:#ccccb3;
+    color: black;
+    text-align: center;
+    font-family: Sans-serif;
+    border-radius: 10px;
+    font-size: 30px;
+    box-shadow: 10px 10px 5px #4d4d33;
+    }
+
+#drop {
+    color: black;
+    }
+
+#drop2 {
+    color: black;
+    }
+
+.pies_row {
+    background-color: black;
+    }
+
+.pie_player1 {
+    font-family: Sans-serif;
+    width: 35%;
+    float: left;
+    padding: 20px;
+    text-allign: center;
+    background-color: #ccccb3;
+    color: black;
+    border-radius: 2%;
+    box-shadow: 10px 10px 5px #4d4d33;
+
+    }
+
+.pie_player2 {
+    font-family: Sans-serif;
+    width: 35%;
+    float: right;
+    padding: 20px;
+    text-allign: center;
+    background-color: #ccccb3;
+    color: black;
+    border-radius: 3%;
+    box-shadow: 10px 10px 5px #4d4d33;
+    }
+
+.evo_1v1_row {
+    border-radius: 5%;
+    }
+
+.graph_player_evolution {
+    margin-top: 1%;
+    margin-left: 10%;
+    margin-right: 10%;
+    width: 80%;
+    color: black;
+    float: left;
+    color: black;
+    font-size: 30px;
+    margin-bottom: 3%;
+    }
+
+
+.evo_1v1_row {
+    margin-top: 3%;
+    font-family: Sans-serif;
+    text-align: center;
+    color: black;
+    font-size: 27px;
+    }
+
+#div {
+    background-color: #d6d6c2;
+    color: black;
+    font-size: 30px;
+    }
+
