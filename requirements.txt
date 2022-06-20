@@ -8,3 +8,4 @@ pandas
 numpy
 seaborn
 statsmodels
+openpyxl
